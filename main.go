@@ -5,7 +5,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"sync/atomic"
 	"time"
 )
 
@@ -13,7 +12,7 @@ var count uint64
 
 func countUpdater() {
 	for {
-		atomic.AddUint64(&count, 1)
+		count++
 		time.Sleep(10 * time.Second)
 	}
 }
@@ -22,7 +21,7 @@ func main() {
 	port := os.Getenv("PORT")
 
 	if port == "" {
-		log.Fatal("$$PORT must be set")
+		log.Fatal("$PORT must be set")
 	}
 
 	go countUpdater()
