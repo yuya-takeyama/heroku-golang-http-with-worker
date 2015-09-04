@@ -1,5 +1,6 @@
 {
   "name": "heroku-golan-http-with-worker",
   "description": "Run HTTP Server and Worker Process within 1 Dyno",
-  "image": "heroku/go:1.5"
+  "image": "heroku/go:1.5",
+  "mount_dir": "src/github.com/yuya-takeyama/heroku-golan-http-with-worker"
 }
