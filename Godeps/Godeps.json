@@ -1,0 +1,5 @@
+{
+	"ImportPath": "github.com/yuya-takeyama/heroku-golang-http-with-worker",
+	"GoVersion": "go1.5",
+	"Deps": []
+}
