@@ -14,7 +14,7 @@ var count uint64
 func countUpdater() {
 	for {
 		atomic.AddUint64(&count, 1)
-		time.Sleep(1 * time.Second)
+		time.Sleep(10 * time.Second)
 	}
 }
 
